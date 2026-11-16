@@ -1,5 +1,6 @@
 :root {
   color-scheme: light;
+  color-scheme: only light;
   --navy: #20263a;
   --navy-deep: #151b2d;
   --navy-mid: #2b344d;
