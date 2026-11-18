@@ -1,6 +1,6 @@
-PAQUETE COMPLETO PARA GITHUB
+PAQUETE ACTUALIZADO PARA GITHUB
 
-Este paquete reemplaza los archivos del sitio actual y conserva el mismo enlace de Cloudflare Pages.
+Esta versión quita por completo la sección de AC/DC/YouTube y recupera la música instrumental tranquila que tenía la invitación originalmente.
 
 CONTENIDO
 - index.html
@@ -10,29 +10,30 @@ CONTENIDO
 - .nojekyll
 - assets/favicon.svg
 - assets/portada-social.svg
+- assets/musica-original.mp3
 
-CAMBIOS INCLUIDOS
-1. Lista desplegable: 17 invitaciones / 40 cupos.
-2. Botón personalizado en cada invitación.
-3. Ventana previa “¿Querés continuar a WhatsApp?” con Cancelar / Sí, abrir WhatsApp.
-4. Mensaje de WhatsApp personalizado con nombre de invitación y cupos.
-5. No hay estados de “Asistencia confirmada” ni almacenamiento de respuestas.
-6. Tema visual alternativo para Samsung Internet; el resto de navegadores conserva la versión clara en secciones marfil.
-7. Música “Highway to Hell” desde el video oficial de AC/DC en YouTube. El usuario debe tocar Play; no se incluye archivo MP3.
+CAMBIOS
+1. Se elimina la sección con el video de YouTube y todas las referencias a AC/DC.
+2. Se recupera el botón flotante original: “REPRODUCIR MÚSICA / PAUSAR MÚSICA”.
+3. El botón reproduce en bucle la melodía instrumental tranquila `assets/musica-original.mp3` y permite pausarla.
+4. Se mantiene la lista desplegable con 17 invitaciones y 40 cupos.
+5. Se mantienen los botones individuales y la ventana previa de WhatsApp.
+6. No aparecen estados de “Asistencia confirmada” ni se guardan respuestas.
+7. Se conserva el ajuste visual de Samsung Internet.
 
-SUBIR A GITHUB (DESDE EL NAVEGADOR)
+SUBIR A GITHUB
 1. Descargá el ZIP y extraélo.
 2. Abrí https://github.com/pablobritez245-boop/invitacion-juan-manuel
-3. En la rama main, elegí Add file > Upload files.
-4. Arrastrá index.html, styles.css, script.js, README.md y .nojekyll, además de la carpeta assets completa.
-5. Aceptá reemplazar los archivos existentes y confirmá el commit en main.
-6. Esperá a que Cloudflare Pages termine el despliegue automático.
-7. Probá el mismo enlace: https://invitacion-juan-manuel.pages.dev
+3. En la rama `main`, elegí Add file > Upload files.
+4. Arrastrá los archivos y carpetas de esta versión, incluida la carpeta `assets` completa.
+5. Verificá que `assets/musica-original.mp3` se suba junto con el resto.
+6. Aceptá reemplazar los archivos existentes y confirmá el commit en `main`.
+7. Cloudflare Pages debería publicar automáticamente cuando finalice el despliegue.
+8. Probá el mismo enlace: https://invitacion-juan-manuel.pages.dev
 
 IMPORTANTE
 - No cambies el nombre del proyecto ni la configuración de Cloudflare.
-- El audio no se aloja en el repositorio; el reproductor incrusta el video oficial de AC/DC.
-- El enlace de WhatsApp es 595972510330.
-- La lista de invitados es pública para todos los que abran la invitación.
-- El archivo assets/musica-original.mp3 de versiones antiguas ya no se utiliza. Puede quedar en el repositorio sin afectar al sitio; si querés limpiar el repo, podés borrarlo manualmente después de comprobar la nueva versión.
-- El paquete no se ha publicado por vos. Revisalo localmente antes de subirlo.
+- No elimines ni renombres `assets/musica-original.mp3`; el botón depende de esa ruta.
+- El mismo enlace sirve para Samsung, iPhone, Chrome y computadora.
+- La música comienza únicamente cuando el invitado pulsa el botón, por las restricciones de reproducción automática de los navegadores.
+- El ZIP está preparado para subir, pero todavía no se ha publicado en GitHub.

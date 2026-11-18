@@ -38,6 +38,51 @@
   updateCountdown();
   window.setInterval(updateCountdown, 1000);
 
+  // Música instrumental tranquila: se inicia únicamente cuando el invitado pulsa el botón.
+  const music = document.getElementById("backgroundMusic");
+  const musicButton = document.getElementById("musicButton");
+  const musicLabel = document.getElementById("musicLabel");
+  const toast = document.getElementById("musicToast");
+  let toastTimeout;
+
+  function showToast(message) {
+    if (!toast) return;
+    toast.textContent = message;
+    toast.classList.add("show");
+    window.clearTimeout(toastTimeout);
+    toastTimeout = window.setTimeout(() => toast.classList.remove("show"), 4200);
+  }
+
+  function setMusicState(isPlaying) {
+    if (!musicButton || !musicLabel) return;
+    musicButton.classList.toggle("is-playing", isPlaying);
+    musicButton.setAttribute("aria-pressed", String(isPlaying));
+    musicButton.setAttribute("aria-label", isPlaying ? "Pausar música de fondo" : "Reproducir música de fondo");
+    musicLabel.textContent = isPlaying ? "PAUSAR MÚSICA" : "REPRODUCIR MÚSICA";
+  }
+
+  if (music && musicButton) {
+    music.volume = 0.34;
+    musicButton.addEventListener("click", async () => {
+      if (!music.paused) {
+        music.pause();
+        setMusicState(false);
+        return;
+      }
+
+      try {
+        await music.play();
+        setMusicState(true);
+      } catch (error) {
+        showToast("No se pudo reproducir la música. Probá nuevamente.");
+        setMusicState(false);
+      }
+    });
+
+    music.addEventListener("pause", () => setMusicState(false));
+    music.addEventListener("ended", () => setMusicState(false));
+  }
+
   // Desplegar/ocultar la lista de invitados.
   const toggleGuests = document.getElementById("toggleGuests");
   const guestContent = document.getElementById("guestContent");
