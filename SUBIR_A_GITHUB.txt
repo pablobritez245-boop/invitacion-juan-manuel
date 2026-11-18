@@ -1,0 +1,38 @@
+PAQUETE COMPLETO PARA GITHUB
+
+Este paquete reemplaza los archivos del sitio actual y conserva el mismo enlace de Cloudflare Pages.
+
+CONTENIDO
+- index.html
+- styles.css
+- script.js
+- README.md
+- .nojekyll
+- assets/favicon.svg
+- assets/portada-social.svg
+
+CAMBIOS INCLUIDOS
+1. Lista desplegable: 17 invitaciones / 40 cupos.
+2. Botón personalizado en cada invitación.
+3. Ventana previa “¿Querés continuar a WhatsApp?” con Cancelar / Sí, abrir WhatsApp.
+4. Mensaje de WhatsApp personalizado con nombre de invitación y cupos.
+5. No hay estados de “Asistencia confirmada” ni almacenamiento de respuestas.
+6. Tema visual alternativo para Samsung Internet; el resto de navegadores conserva la versión clara en secciones marfil.
+7. Música “Highway to Hell” desde el video oficial de AC/DC en YouTube. El usuario debe tocar Play; no se incluye archivo MP3.
+
+SUBIR A GITHUB (DESDE EL NAVEGADOR)
+1. Descargá el ZIP y extraélo.
+2. Abrí https://github.com/pablobritez245-boop/invitacion-juan-manuel
+3. En la rama main, elegí Add file > Upload files.
+4. Arrastrá index.html, styles.css, script.js, README.md y .nojekyll, además de la carpeta assets completa.
+5. Aceptá reemplazar los archivos existentes y confirmá el commit en main.
+6. Esperá a que Cloudflare Pages termine el despliegue automático.
+7. Probá el mismo enlace: https://invitacion-juan-manuel.pages.dev
+
+IMPORTANTE
+- No cambies el nombre del proyecto ni la configuración de Cloudflare.
+- El audio no se aloja en el repositorio; el reproductor incrusta el video oficial de AC/DC.
+- El enlace de WhatsApp es 595972510330.
+- La lista de invitados es pública para todos los que abran la invitación.
+- El archivo assets/musica-original.mp3 de versiones antiguas ya no se utiliza. Puede quedar en el repositorio sin afectar al sitio; si querés limpiar el repo, podés borrarlo manualmente después de comprobar la nueva versión.
+- El paquete no se ha publicado por vos. Revisalo localmente antes de subirlo.
